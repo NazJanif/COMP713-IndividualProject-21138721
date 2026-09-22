@@ -1,4 +1,4 @@
-// Database connectivity — connection pooling, as covered in Class 06.
+// Database connectivity — connection pooling, as covered in Class 6
 // A pool is created once at startup and shared across all requests,
 // rather than opening a new connection per request.
 require('dotenv').config();

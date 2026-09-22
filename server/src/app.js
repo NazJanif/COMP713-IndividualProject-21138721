@@ -12,7 +12,7 @@ app.use(express.json());
 
 // Serve the client (Products / Place Order / My Orders page) from the
 // same origin as the API, so the whole app runs with one `npm start`
-// and no cross-origin requests are needed for the demo.
+// and no cross-origin requests are needed for the demo
 app.use(express.static(path.join(__dirname, '..', '..', 'client')));
 
 // Simple request log — useful when demonstrating communication in the video.

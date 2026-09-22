@@ -1,5 +1,5 @@
 // Controller layer — parses HTTP requests, calls the service, and maps
-// results/errors to HTTP responses. No SQL and no business rules here.
+// results/errors to HTTP responses
 const productService = require('../services/productService');
 
 async function getProducts(req, res, next) {

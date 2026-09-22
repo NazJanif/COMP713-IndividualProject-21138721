@@ -1,5 +1,4 @@
 // Mini Shop client — talks to the Express API on the same origin.
-// No framework: fetch + plain DOM updates, enough for a 3-view demo.
 
 const API = '/api';
 

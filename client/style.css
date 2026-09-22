@@ -1,6 +1,6 @@
-/* Mini Shop — a small stock ledger, styled like one.
+/* Mini Shop — a small stock ledger
    Monospace carries the numbers (prices, quantities, stock counts);
-   a plain sans carries everything you read as prose. */
+   a plain sans carries everything read as prose. */
 
 :root {
   --ink: #1B2321;

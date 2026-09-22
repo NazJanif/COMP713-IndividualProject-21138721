@@ -67,15 +67,15 @@ mini-shop/
    ```
    DB_HOST=your-database-host
    DB_PORT=3306
-   DB_NAME=mini_shop
+   DB_NAME=comp713_21138721
    DB_USER=your_mysql_username
    DB_PASSWORD=your_mysql_password
    PORT=3000
    ```
 
-   `.env` is git-ignored — never commit real credentials.
+   
 
-3. **Create the database** (if it doesn't already exist)
+3. **Create the database** 
 
    Connect to your MySQL server and run:
 

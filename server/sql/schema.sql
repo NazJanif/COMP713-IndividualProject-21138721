@@ -1,5 +1,5 @@
 -- Customer–Order Mini Shop
--- Schema: products (1) -----< orders (many)
+-- Schema: products (1) 
 
 CREATE TABLE IF NOT EXISTS products (
     id          BIGINT AUTO_INCREMENT PRIMARY KEY,

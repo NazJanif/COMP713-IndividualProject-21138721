@@ -1,6 +1,6 @@
-// Repository layer — the only place that talks SQL to the database.
+// Repository layer — the only place that talks SQL to the database
 // All queries use parameterised (?) placeholders — mysql2 sends these
-// as prepared statements, never string-concatenated SQL.
+// as prepared statements, never string-concatenated SQL
 const pool = require('../config/db');
 
 async function findAll() {

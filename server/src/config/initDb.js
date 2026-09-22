@@ -1,6 +1,6 @@
 // Run with: npm run init-db
-// Reads sql/schema.sql and executes it against the configured database,
-// creating the tables (and seed products) if they don't already exist.
+// Reads sql/schema.sql and executes it against the configured database
+// creating the tables (and seed products) if they don't already exist
 require('dotenv').config();
 const fs = require('fs');
 const path = require('path');

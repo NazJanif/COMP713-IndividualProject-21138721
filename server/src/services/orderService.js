@@ -1,5 +1,5 @@
-// Service layer — business rules and transaction boundaries live here,
-// following the Controller / Service / Repository split from Class 10.
+// Service layer — business rules and transaction boundaries live here
+// following the Controller / Service / Repository split from class 10
 // placeOrder and cancelOrder each touch two tables (products, orders) and
 // must succeed or fail together, so each is wrapped in a single
 // transaction: BEGIN ... COMMIT, or ROLLBACK if any step fails.
