@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mini Shop — Ledger</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="ledger-header">
+  <div class="ledger-header__title">
+    <span class="ledger-header__mark">MS</span>
+    <div>
+      <h1>Mini Shop</h1>
+      <p class="ledger-header__sub">Customer–Order Mini Shop &middot; COMP713 Individual Project</p>
+    </div>
+  </div>
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button class="tab is-active" data-tab="products" role="tab" aria-selected="true">Products</button>
+    <button class="tab" data-tab="place-order" role="tab" aria-selected="false">Place order</button>
+    <button class="tab" data-tab="orders" role="tab" aria-selected="false">Orders ledger</button>
+  </nav>
+</header>
+
+<main>
+
+  <section id="panel-products" class="panel is-active" role="tabpanel">
+    <div class="panel-head">
+      <h2>Stock</h2>
+      <button id="refresh-products" class="btn btn--ghost">Refresh</button>
+    </div>
+    <table class="ledger-table" id="products-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Description</th>
+          <th class="num">Price</th>
+          <th class="num">In stock</th>
+        </tr>
+      </thead>
+      <tbody id="products-tbody">
+        <tr><td colspan="4" class="empty">Loading products&hellip;</td></tr>
+      </tbody>
+    </table>
+
+    <details class="add-product">
+      <summary>+ Add a new product</summary>
+      <form id="add-product-form" class="form-grid">
+        <label>Name
+          <input type="text" name="name" required maxlength="120" />
+        </label>
+        <label>Description
+          <input type="text" name="description" maxlength="500" />
+        </label>
+        <label>Price (NZD)
+          <input type="number" name="price" step="0.01" min="0" required />
+        </label>
+        <label>Starting stock
+          <input type="number" name="stock_qty" min="0" step="1" value="0" required />
+        </label>
+        <button type="submit" class="btn btn--primary">Add product</button>
+      </form>
+      <p class="form-message" id="add-product-message" aria-live="polite"></p>
+    </details>
+  </section>
+
+  <section id="panel-place-order" class="panel" role="tabpanel">
+    <div class="panel-head">
+      <h2>Place an order</h2>
+    </div>
+    <form id="order-form" class="form-grid">
+      <label>Product
+        <select name="product_id" id="order-product-select" required></select>
+      </label>
+      <label>Quantity
+        <input type="number" name="quantity" min="1" step="1" value="1" required />
+      </label>
+      <label>Your name
+        <input type="text" name="customer_name" required maxlength="120" />
+      </label>
+      <label>Your email
+        <input type="email" name="customer_email" required maxlength="160" />
+      </label>
+      <button type="submit" class="btn btn--primary">Submit order</button>
+    </form>
+    <p class="form-message" id="order-message" aria-live="polite"></p>
+  </section>
+
+  <section id="panel-orders" class="panel" role="tabpanel">
+    <div class="panel-head">
+      <h2>Orders ledger</h2>
+      <button id="refresh-orders" class="btn btn--ghost">Refresh</button>
+    </div>
+    <table class="ledger-table" id="orders-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Product</th>
+          <th class="num">Qty</th>
+          <th class="num">Total</th>
+          <th>Customer</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="orders-tbody">
+        <tr><td colspan="7" class="empty">Loading orders&hellip;</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
