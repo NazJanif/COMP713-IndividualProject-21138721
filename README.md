@@ -72,7 +72,7 @@ mini-shop/
    DB_PASSWORD=your_mysql_password
    PORT=3000
    ```
-
+  Note: the AWS RDS MySQL instance requires SSL. The connection pool (src/config/db.js) and schema-init script (src/config/initDb.js) are both configured with ssl: { rejectUnauthorized: false } to connect over TLS without validating RDS's certificate chain
    
 
 3. **Create the database** 
@@ -193,6 +193,7 @@ curl -X PATCH http://localhost:3000/api/orders/1/cancel
   demo scale, would need addressing for a larger dataset.
 - Prices are returned by `mysql2` as strings (a `DECIMAL` driver
   quirk); the client converts with `Number(...)` before formatting.
+- TLS certificate validation is disabled (rejectUnauthorized: false) when connecting to the database  
 
 ## Possible improvements
 
